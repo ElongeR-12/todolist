@@ -21,13 +21,13 @@ test('should test props to todoList components', () => {
 });
 test('has state',()=>{
   const appWrapper = shallow(<App/>);
-  const appState = appWrapper.state();
+  const appState = appWrapper.find(TodoList).prop('todos');
   expect(appState).not.toBeNull();
 })
 test('state lenght great than 0',()=>{
   const appWrapper = shallow(<App/>);
-  const appState = appWrapper.state();
-  expect(appState.todos).toHaveLength(3);
+  const appState = appWrapper.find(TodoList).prop('todos');
+  expect(appState).toHaveLength(3);
 })
 test('todos props of todolists should be an array of todo, and contain initial todos', () => {
   const wrapper = shallow(<App/>);

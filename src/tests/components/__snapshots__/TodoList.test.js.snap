@@ -5,6 +5,7 @@ exports[`list todo shoud return on todo 1`] = `
   <p>
     <input
       defaultChecked={false}
+      onClick={[Function]}
       type="checkbox"
     />
     <span>

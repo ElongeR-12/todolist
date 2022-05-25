@@ -9,7 +9,7 @@ describe('list todo',()=>{
     })
     test('shoud return on todo',()=>{
         const todo = {
-            id:Math.random().toString,
+            id: "dfqfdsqfdsqf",
             state:false,
             description:"Lorem ipsum",
             title:"title three"

@@ -5,23 +5,24 @@ exports[`App test validation todos props of todolists should be an array of todo
   className="App"
 >
   <TodoList
+    setTodos={[Function]}
     todos={
       Array [
         Object {
           "description": "Lorem ipsum dolor sit amet",
-          "id": [Function],
+          "id": "fdsqfdkslqfdsq",
           "state": false,
           "title": "title one",
         },
         Object {
           "description": "Lorem ipsum dolo",
-          "id": [Function],
+          "id": "fdqfdqslk",
           "state": false,
           "title": "title two",
         },
         Object {
           "description": "Lorem ipsum",
-          "id": [Function],
+          "id": "dfsqfdsqfdq",
           "state": false,
           "title": "title three",
         },

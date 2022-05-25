@@ -1,38 +1,35 @@
 
 import './App.css';
-import React, { Component } from 'react'
+import React from 'react'
 import TodoList from './components/TodoList';
-export class App extends Component {
-  state = {
-    todos : [
-      {
-        id:Math.random().toString,
-        state:false,
-        description:"Lorem ipsum dolor sit amet",
-        title:"title one"
-      },
-      {
-        id:Math.random().toString,
-        state:false,
-        description:"Lorem ipsum dolo",
-        title:"title two"
-      },
-      {
-        id:Math.random().toString,
-        state:false,
-        description:"Lorem ipsum",
-        title:"title three"
-      }
-    ]
-  }
+function App() {
 
-  render() {
+ const [todos,setTodos]= React.useState( [
+        {
+          id:"fdsqfdkslqfdsq",
+          state:false,
+          description:"Lorem ipsum dolor sit amet",
+          title:"title one"
+        },
+        {
+          id:"fdqfdqslk",
+          state:false,
+          description:"Lorem ipsum dolo",
+          title:"title two"
+        },
+        {
+          id:"dfsqfdsqfdq",
+          state:false,
+          description:"Lorem ipsum",
+          title:"title three"
+        }
+      ]
+ )
     return (
       <div className="App">
-      <TodoList todos={this.state.todos}/>
+      <TodoList todos={todos} setTodos={setTodos}/>
     </div>
     )
-  }
 }
 
 export default App
