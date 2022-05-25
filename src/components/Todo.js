@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const Todo = ({todo, setTodos, todos}) => {
     const toggleCheckbox = (id) =>{
         const newTodos = [...todos];
@@ -17,7 +17,8 @@ const Todo = ({todo, setTodos, todos}) => {
             defaultChecked={todo?.state}
             onClick={()=>toggleCheckbox(todo.id)}
           />
-         <span>{todo?.title}</span>
+        <span>{todo?.title}</span>
+        <Link to={`/todo/${todo.id}`}>details</Link>
         </p>
     </div>
   )
