@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`list todo shoud return on todo 1`] = `
+<div>
+  <p>
+    <input
+      defaultChecked={false}
+      type="checkbox"
+    />
+    <span>
+      title three
+    </span>
+  </p>
+</div>
+`;

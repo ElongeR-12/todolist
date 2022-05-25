@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App test validation todos props of todolists should be an array of todo, and contain initial todos 1`] = `
+<div
+  className="App"
+>
+  <TodoList
+    todos={
+      Array [
+        Object {
+          "description": "Lorem ipsum dolor sit amet",
+          "id": [Function],
+          "state": false,
+          "title": "title one",
+        },
+        Object {
+          "description": "Lorem ipsum dolo",
+          "id": [Function],
+          "state": false,
+          "title": "title two",
+        },
+        Object {
+          "description": "Lorem ipsum",
+          "id": [Function],
+          "state": false,
+          "title": "title three",
+        },
+      ]
+    }
+  />
+</div>
+`;
