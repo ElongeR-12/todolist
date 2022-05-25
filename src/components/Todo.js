@@ -18,7 +18,7 @@ const Todo = ({todo, setTodos, todos}) => {
             onClick={()=>toggleCheckbox(todo.id)}
           />
         <span>{todo?.title}</span>
-        <Link to={`/todo/${todo.id}`}>details</Link>
+        <Link to={`/todolist/todo/${todo.id}`}>details</Link>
         </p>
     </div>
   )

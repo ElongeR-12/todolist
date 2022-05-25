@@ -10,7 +10,7 @@ const TodoDetails = ({todos}) => {
             <h3>Title : {todo[0].title}</h3>
             <h5>description : {todo[0].description}</h5>
         </div>
-        <Link to="/">Back</Link>
+        <Link to="/todolist">Back</Link>
     </div>
   )
 }
