@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow} from 'enzyme';
 import Todo from '../../components/Todo';
 
 describe("Todo test validation",()=>{
@@ -39,5 +39,9 @@ test('title should be defined', () => {
 test('confirm a checkBox element with toggle', () => {
   const wrapperNoprops = shallow(<Todo/>);
   expect(wrapperNoprops.find('input')).toHaveLength(1);
+});
+test('should test TodoItem component', () => {
+  const wrapper = shallow(<Todo/>);
+  expect(wrapper).toMatchSnapshot();
 });
 })

@@ -1,18 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`list todo shoud return on todo 1`] = `
+exports[`Todo test validation should test TodoItem component 1`] = `
 <div>
   <p>
     <input
-      defaultChecked={false}
       onClick={[Function]}
       type="checkbox"
     />
-    <span>
-      title three
-    </span>
+    <span />
     <Link
-      to="/todolist/todo/dfqfdsqfdsqf"
+      to="/todolist/todo/undefined"
     >
       details
     </Link>

@@ -1,33 +1,72 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App test validation todos props of todolists should be an array of todo, and contain initial todos 1`] = `
+exports[`App test validation todos props of todolists should be an array of todo, and contain initial todos of arrays objects 3 lenghts 1`] = `
 <div
   className="App"
 >
-  <TodoList
-    setTodos={[Function]}
-    todos={
-      Array [
-        Object {
-          "description": "Lorem ipsum dolor sit amet",
-          "id": "fdsqfdkslqfdsq",
-          "state": false,
-          "title": "title one",
-        },
-        Object {
-          "description": "Lorem ipsum dolo",
-          "id": "fdqfdqslk",
-          "state": false,
-          "title": "title two",
-        },
-        Object {
-          "description": "Lorem ipsum",
-          "id": "dfsqfdsqfdq",
-          "state": false,
-          "title": "title three",
-        },
-      ]
-    }
-  />
+  <BrowserRouter>
+    <Routes>
+      <Route
+        element={
+          <TodoList
+            setTodos={[Function]}
+            todos={
+              Array [
+                Object {
+                  "description": "Lorem ipsum dolor sit amet",
+                  "id": "f7be86e6-8a0e-4e87-8148-d0dc46942402",
+                  "state": false,
+                  "title": "title one",
+                },
+                Object {
+                  "description": "Lorem ipsum dolo",
+                  "id": "ecacd019-541f-4e66-a956-772e5a523b96",
+                  "state": false,
+                  "title": "title two",
+                },
+                Object {
+                  "description": "Lorem ipsum",
+                  "id": "83e136fa-e386-405a-9b76-8f52bdc8a18a",
+                  "state": false,
+                  "title": "title three",
+                },
+              ]
+            }
+          />
+        }
+        exact={true}
+        path="/todolist"
+      />
+      <Route
+        element={
+          <TodoDetails
+            todos={
+              Array [
+                Object {
+                  "description": "Lorem ipsum dolor sit amet",
+                  "id": "f7be86e6-8a0e-4e87-8148-d0dc46942402",
+                  "state": false,
+                  "title": "title one",
+                },
+                Object {
+                  "description": "Lorem ipsum dolo",
+                  "id": "ecacd019-541f-4e66-a956-772e5a523b96",
+                  "state": false,
+                  "title": "title two",
+                },
+                Object {
+                  "description": "Lorem ipsum",
+                  "id": "83e136fa-e386-405a-9b76-8f52bdc8a18a",
+                  "state": false,
+                  "title": "title three",
+                },
+              ]
+            }
+          />
+        }
+        path="/todolist/todo/:id"
+      />
+    </Routes>
+  </BrowserRouter>
 </div>
 `;

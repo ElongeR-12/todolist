@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddTodo test should test AddTodo component 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    onChange={[Function]}
+    placeholder="Enter a title..."
+    required={true}
+    type="text"
+    value=""
+  />
+  <input
+    onChange={[Function]}
+    placeholder="Enter a description..."
+    type="text"
+    value=""
+  />
+  <button
+    type="submit"
+  >
+    add todo
+  </button>
+</form>
+`;
