@@ -1,14 +1,27 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 const Todo = ({todo, setTodos, todos}) => {
-    const toggleCheckbox = (id) =>{
-        const newTodos = [...todos];
-        const todo = newTodos.filter((item)=>item.id===id)
-        todo[0].state = !todo.state;
-        const remainTodo = newTodos.filter((item)=>item.id !== id);
-        const todoFinal = [...remainTodo, ...todo]
-        setTodos([...todoFinal]);
-      }
+    const fetchTodo = async (id) => {
+      const res = await fetch(`http://localhost:5000/todos/${id}`)
+      const data = await res.json()
+      return data
+    }
+    const toggleCheckbox = async (id) => {
+      const todoToggle = await fetchTodo(id)
+      console.log("todotogle",todoToggle)
+      const updTodo = { ...todoToggle, state: !todoToggle.state }
+      console.log(updTodo)
+      const res = await fetch(`http://localhost:5000/todos/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify(updTodo),
+      })
+      const data = await res.json()
+      const remainTodo = todos.filter((item)=>item.id !== data.id);
+      setTodos([...remainTodo, data])
+    }
   return (
     <div>
         <p>

@@ -1,12 +1,21 @@
 import React, {useState} from 'react';
-import { v4 as uuidv4 } from 'uuid';
 const AddTodo = ({todos, setTodos}) => {
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
-    const addTodo = () => setTodos([{ id: uuidv4(), description: description ? description:"", title: title, state: false}, ...todos]);
+    const addTodo = async (todo) => {
+        const res = await fetch('http://localhost:5000/todos', {
+          method: 'POST',
+          headers: {
+            'Content-type': 'application/json',
+          },
+          body: JSON.stringify(todo),
+        })
+        const data = await res.json()
+        setTodos([data, ...todos])
+      }
     const handleSubmit =(e)=>{
         e.preventDefault();
-        title && addTodo();
+        title && addTodo({description: description ? description:"", title: title, state: false});
         setTitle("");
         setDescription("")
     }

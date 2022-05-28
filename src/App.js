@@ -5,28 +5,40 @@ import TodoList from './components/TodoList';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import TodoDetails from './components/TodoDetails';
 function App() {
-
  const [todos,setTodos]= React.useState( [
         {
-          id:"f7be86e6-8a0e-4e87-8148-d0dc46942402",
+          id: 1,
           state:false,
           description:"Lorem ipsum dolor sit amet",
           title:"title one"
         },
         {
-          id:"ecacd019-541f-4e66-a956-772e5a523b96",
+          id: 2,
           state:false,
           description:"Lorem ipsum dolo",
           title:"title two"
         },
         {
-          id:"83e136fa-e386-405a-9b76-8f52bdc8a18a",
+          id: 3,
           state:false,
           description:"Lorem ipsum",
           title:"title three"
         }
       ]
  )
+ 
+ React.useEffect(() => {
+  const getTasks = async () => {
+    const todosFromServer = await fetchTodos()
+    setTodos(todosFromServer)
+  }
+  getTasks()
+}, [])
+ const fetchTodos = async () => {
+  const res = await fetch('http://localhost:5000/todos')
+  const data = await res.json()
+  return data
+}
     return (
     <div className="App">
       <Router>

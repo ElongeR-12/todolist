@@ -14,19 +14,19 @@ exports[`App test validation todos props of todolists should be an array of todo
               Array [
                 Object {
                   "description": "Lorem ipsum dolor sit amet",
-                  "id": "f7be86e6-8a0e-4e87-8148-d0dc46942402",
+                  "id": 1,
                   "state": false,
                   "title": "title one",
                 },
                 Object {
                   "description": "Lorem ipsum dolo",
-                  "id": "ecacd019-541f-4e66-a956-772e5a523b96",
+                  "id": 2,
                   "state": false,
                   "title": "title two",
                 },
                 Object {
                   "description": "Lorem ipsum",
-                  "id": "83e136fa-e386-405a-9b76-8f52bdc8a18a",
+                  "id": 3,
                   "state": false,
                   "title": "title three",
                 },
@@ -44,19 +44,19 @@ exports[`App test validation todos props of todolists should be an array of todo
               Array [
                 Object {
                   "description": "Lorem ipsum dolor sit amet",
-                  "id": "f7be86e6-8a0e-4e87-8148-d0dc46942402",
+                  "id": 1,
                   "state": false,
                   "title": "title one",
                 },
                 Object {
                   "description": "Lorem ipsum dolo",
-                  "id": "ecacd019-541f-4e66-a956-772e5a523b96",
+                  "id": 2,
                   "state": false,
                   "title": "title two",
                 },
                 Object {
                   "description": "Lorem ipsum",
-                  "id": "83e136fa-e386-405a-9b76-8f52bdc8a18a",
+                  "id": 3,
                   "state": false,
                   "title": "title three",
                 },

@@ -2,7 +2,8 @@ import React from 'react'
 import { useParams, Link} from 'react-router-dom'
 const TodoDetails = ({todos}) => {
     const {id} = useParams()
-    const todo = todos.filter((todo)=> todo.id === id)
+    const idNumber = parseInt(id)
+    const todo = todos.filter((todo)=> todo.id === idNumber)
   return (
     <div>
         <h1>Todo Details</h1>

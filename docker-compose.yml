@@ -1,9 +1,11 @@
-version: "3.8"
+version: "3"
+
 services:
-  print:
-    stdin_open: true
+  app:
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      - ./src:/app/src
     ports:
       - "80:80"
