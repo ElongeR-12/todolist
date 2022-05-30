@@ -37,7 +37,7 @@ form input {
   background: aliceblue;
 }
 
-.App p a {
+a {
   background-color: black;
   color: white;
   padding: 5px;

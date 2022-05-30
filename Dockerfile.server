@@ -1,0 +1,11 @@
+FROM node:alpine
+
+ENV tmp_dir /tmp
+
+RUN npm install -g json-server
+
+RUN echo '{"todos" : [{"id":1,"state":false,"title": "title one","description": "description one"}]}' > /tmp/db.json
+
+ENTRYPOINT ["json-server", "--port", "8080", "--host", "0.0.0.0"]
+
+CMD ["/tmp/db.json"]

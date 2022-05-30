@@ -1,7 +1,6 @@
 ## To run server
 
-npm run server
-server domain : http://localhost/todos
+npm run server, server domain : http://localhost:5000/todos
 
 ## front-end url
 

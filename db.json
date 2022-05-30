@@ -2,7 +2,7 @@
   "todos": [
     {
       "id": 1,
-      "state": true,
+      "state": false,
       "description": "Lorem ipsum dolor sit amet",
       "title": "title one"
     },
@@ -17,18 +17,6 @@
       "state": false,
       "description": "Lorem ipsum",
       "title": "title three"
-    },
-    {
-      "description": "fdqs",
-      "title": "qdfqf",
-      "state": false,
-      "id": 4
-    },
-    {
-      "description": "fdqfdq",
-      "title": "fdsqdfkjmqf",
-      "state": false,
-      "id": 5
     }
   ]
 }

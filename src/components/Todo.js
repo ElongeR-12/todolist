@@ -27,7 +27,7 @@ const Todo = ({todo, setTodos, todos}) => {
         <p>
           <input
             type="checkbox"
-            defaultChecked={todo?.state}
+            checked={todo?.state}
             onClick={()=>toggleCheckbox(todo?.id)}
           />
         <span>{todo?.title}</span>
