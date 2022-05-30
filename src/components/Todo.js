@@ -8,9 +8,7 @@ const Todo = ({todo, setTodos, todos}) => {
     }
     const toggleCheckbox = async (id) => {
       const todoToggle = await fetchTodo(id)
-      console.log("todotogle",todoToggle)
       const updTodo = { ...todoToggle, state: !todoToggle.state }
-      console.log(updTodo)
       const res = await fetch(`http://localhost:5000/todos/${id}`, {
         method: 'PUT',
         headers: {
