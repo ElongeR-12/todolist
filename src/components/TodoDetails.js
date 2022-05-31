@@ -7,7 +7,7 @@ const TodoDetails = ({todos}) => {
   return (
     <div>
         <h1>Todo Details</h1>
-            <div>
+        <div>
             <h3>Title : {todo[0].title}</h3>
             <h5>description : {todo[0].description}</h5>
         </div>

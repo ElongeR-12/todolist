@@ -4,7 +4,7 @@ exports[`Todo test validation should test TodoItem component 1`] = `
 <div>
   <p>
     <input
-      onClick={[Function]}
+      onChange={[Function]}
       type="checkbox"
     />
     <span />

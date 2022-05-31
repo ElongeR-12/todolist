@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-const AddTodo = ({todos, setTodos}) => {
+const AddTodo = ({setTodos}) => {
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
     const addTodo = async (todo) => {
@@ -11,7 +11,7 @@ const AddTodo = ({todos, setTodos}) => {
           body: JSON.stringify(todo),
         })
         const data = await res.json()
-        setTodos([data, ...todos])
+        setTodos((state)=>[data, ...state])
       }
     const handleSubmit =(e)=>{
         e.preventDefault();
@@ -19,6 +19,9 @@ const AddTodo = ({todos, setTodos}) => {
         setTitle("");
         setDescription("")
     }
+    React.useEffect(() => {
+      console.log('hello add todo');
+    });
   return (
     <form onSubmit={handleSubmit}>
         <input

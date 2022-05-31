@@ -4,8 +4,8 @@ exports[`list todo shoud return on todo 1`] = `
 <div>
   <p>
     <input
-      defaultChecked={false}
-      onClick={[Function]}
+      checked={false}
+      onChange={[Function]}
       type="checkbox"
     />
     <span>

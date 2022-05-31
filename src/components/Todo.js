@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-const Todo = ({todo, setTodos, todos}) => {
+const Todo = ({todo, setTodos}) => {
     const fetchTodo = async (id) => {
       const res = await fetch(`http://localhost:5000/todos/${id}`)
       const data = await res.json()
@@ -17,8 +17,10 @@ const Todo = ({todo, setTodos, todos}) => {
         body: JSON.stringify(updTodo),
       })
       const data = await res.json()
-      const remainTodo = todos.filter((item)=>item.id !== data.id);
-      setTodos([...remainTodo, data])
+      setTodos((state)=>{
+        const remainTodo = state.filter((item)=>item.id !== data.id);
+        return [...remainTodo, data]
+      })
     }
   return (
     <div>
@@ -26,7 +28,7 @@ const Todo = ({todo, setTodos, todos}) => {
           <input
             type="checkbox"
             checked={todo?.state}
-            onClick={()=>toggleCheckbox(todo?.id)}
+            onChange={()=>toggleCheckbox(todo?.id)}
           />
         <span>{todo?.title}</span>
         <Link to={`/todolist/todo/${todo?.id}`}>details</Link>

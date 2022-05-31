@@ -10,7 +10,7 @@ describe("Todo test validation",()=>{
       title:"title two"}
     const wrapper = shallow(<Todo todo={todo}/>);
     const input = wrapper.find('input');
-    expect(input.props().defaultChecked).toEqual(todo.state);
+    expect(input.props().checked).toEqual(todo.state);
 });
 test('title should be defined', () => {
     const todo = { id:"rezareza",
