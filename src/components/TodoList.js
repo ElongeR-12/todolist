@@ -3,7 +3,7 @@ import Todo from './Todo'
 import AddTodo from './AddTodo';
 
 function TodoList({todos, setTodos}) {
-  
+    
   return(
       <>
         <h1>Todo List</h1>

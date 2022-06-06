@@ -1,6 +1,15 @@
 import React from 'react';
 import { shallow} from 'enzyme';
 import Todo from '../../components/Todo';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
+const MockTodo = () =>{
+  return (
+    <BrowserRouter>
+      <Todo/>
+    </BrowserRouter>
+  )
+}
 
 describe("Todo test validation",()=>{
   test('state should be true or false', () => {
@@ -43,5 +52,22 @@ test('confirm a checkBox element with toggle', () => {
 test('should test TodoItem component', () => {
   const wrapper = shallow(<Todo/>);
   expect(wrapper).toMatchSnapshot();
+});
+test('should test toogle checkbox input', () => {
+  const todo = {
+    id: 1,
+    state:false,
+    description:"Lorem ipsum",
+    title:"title three"
+}
+  render(<MockTodo todo={todo}/>);
+  const input = screen.getByRole('checkbox')
+  expect(input).toHaveProperty("checked", false)
+  fireEvent.click(input)
+  expect(input).toHaveProperty("checked", true)
+  fireEvent.click(input)
+  expect(input).toHaveProperty("checked", false)
+  fireEvent.click(input)
+  expect(input).toHaveProperty("checked", true)
 });
 })

@@ -15,13 +15,10 @@ const AddTodo = ({setTodos}) => {
       }
     const handleSubmit =(e)=>{
         e.preventDefault();
-        title && addTodo({description: description ? description:"", title: title, state: false});
+        title && addTodo({description: description, title: title, state: false});
         setTitle("");
         setDescription("")
     }
-    React.useEffect(() => {
-      console.log('hello add todo');
-    });
   return (
     <form onSubmit={handleSubmit}>
         <input

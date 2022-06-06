@@ -7,14 +7,14 @@ describe('list todo',()=>{
         const wrapper = shallow(<TodoList/>);
         expect(wrapper.find(Todo)).toBeTruthy()
     })
-    test('shoud return on todo',()=>{
-        const todo = {
-            id: "dfqfdsqfdsqf",
+    test('shoud return one todo',()=>{
+        const todos = [{
+            id: 1,
             state:false,
             description:"Lorem ipsum",
             title:"title three"
-        }
-        const wrapper = shallow(<Todo todo={todo}/>);
+        }]
+        const wrapper = shallow(<Todo todos={todos}/>);
         expect(wrapper).toMatchSnapshot();
     })
 });

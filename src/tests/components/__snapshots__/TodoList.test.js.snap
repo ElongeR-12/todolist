@@ -1,18 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`list todo shoud return on todo 1`] = `
+exports[`list todo shoud return one todo 1`] = `
 <div>
   <p>
     <input
-      checked={false}
       onChange={[Function]}
       type="checkbox"
     />
-    <span>
-      title three
-    </span>
+    <span />
     <Link
-      to="/todolist/todo/dfqfdsqfdsqf"
+      to="/todolist/todo/undefined"
     >
       details
     </Link>
